@@ -88,6 +88,7 @@ class RecipeView extends View {
       <h2 class="heading--2">Recipe ingredients</h2>
       <ul class="recipe__ingredient-list">
         ${this._data.ingredients.map(this._generateMarkupIngredient).join('')}
+      </ul>
     </div>
 
     <div class="recipe__directions">
@@ -110,19 +111,15 @@ class RecipeView extends View {
         </svg>
       </a>
     </div>
-
-    <svg class="recipe_icon">
-      <use href="${icons}#icon-check"></use>
-    </svg>
   `;
   }
 
   _generateMarkupIngredient(ing) {
     return `
-          <li class="recipe__ingredient">
-            <svg class="recipe_icon">
-              <use href="${icons}#icon-check"></use>
-            </svg>
+        <li class="recipe__ingredient">
+          <svg class="recipe__icon">
+            <use href="${icons}#icon-check"></use>
+          </svg>
           <div class="recipe__quantity">${
             ing.quantity ? new Fraction(ing.quantity).toString() : ''
           }</div>
