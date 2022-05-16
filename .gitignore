@@ -14,7 +14,7 @@ node_modules
 .sass-cache
 
 # Ignore .parcel-chache and dist folder
-.parcel-chache
+.parcel-cache
 dist
 
 # Ignore .prettier
